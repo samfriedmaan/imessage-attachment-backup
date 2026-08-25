@@ -40,7 +40,7 @@ Under the hood, it wraps the high-performance [`imessage-exporter`](https://gith
 Clone or download this repository, then run:
 
 ```bash
-python3 backup-contact-attachments.py
+python3 backup-attachments.py
 ```
 
 This will:
@@ -54,7 +54,7 @@ This will:
 ## Usage & Options
 
 ```text
-usage: backup-contact-attachments.py [-h] [-s SOURCE] [-o OUTPUT]
+usage: backup-attachments.py [-h] [-s SOURCE] [-o OUTPUT]
                                      [-m {copy,move}] [-c {clone,basic,full}]
                                      [-f {txt,html}] [--keep-temp]
 
@@ -85,18 +85,18 @@ options:
 
 ### 1. Run a fresh backup to a custom folder
 ```bash
-python3 backup-contact-attachments.py -o ~/Desktop/My_iMessage_Photos
+python3 backup-attachments.py -o ~/Desktop/My_iMessage_Photos
 ```
 
 ### 2. Convert HEIC images to JPEG automatically during export
 ```bash
-python3 backup-contact-attachments.py -c basic
+python3 backup-attachments.py -c basic
 ```
 
 ### 3. Organize an existing export folder (saves disk space with `move`)
 If you have already run `imessage-exporter` previously:
 ```bash
-python3 backup-contact-attachments.py -s ~/imessage_export -m move -o ~/Organized_Attachments
+python3 backup-attachments.py -s ~/imessage_export -m move -o ~/Organized_Attachments
 ```
 
 ---
